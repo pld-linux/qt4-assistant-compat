@@ -6,7 +6,7 @@ Summary:	Qt Assistant compatibility binary (legacy)
 Summary(pl.UTF-8):	Program Qt Assistant (stara wersja)
 Name:		qt4-assistant-compat
 Version:	4.6.3
-Release:	1
+Release:	2
 License:	LGPL v2.1 with Nokia Qt exception or GPL v3
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.qt.nokia.com/qt/source/qt-assistant-qassistantclient-library-compat-src-%{version}.tar.gz
@@ -107,6 +107,7 @@ wprowadzony w Qt 4.4 oraz opartą na nim wersję programu Qt Assistant
 Summary:	Qt AssistantClient compatibility library - development files
 Summary(pl.UTF-8):	Biblioteka kompatybilności Qt AssistantClient - pliki programistyczne
 Group:		X11/Development/Libraries
+Requires:	QtAssistant-compat = %{version}-%{release}
 Requires:	QtCore-devel >= 4.7
 Requires:	QtGui-devel >= 4.7
 Requires:	QtNetwork-devel >= 4.7
@@ -189,15 +190,15 @@ rm -rf $RPM_BUILD_ROOT
 %doc LGPL_EXCEPTION.txt
 %attr(755,root,root) %{_libdir}/libQtAssistantClient.so.*.*
 %attr(755,root,root) %ghost %{_libdir}/libQtAssistantClient.so.4
-%{_includedir}/qt4/QtAssistant
-%{_includedir}/qt4/Qt/QAssistantClient
-%{_includedir}/qt4/Qt/QtAssistant
-%{_includedir}/qt4/Qt/qassistantclient.h
-%{_includedir}/qt4/Qt/qassistantclient_global.h
 
 %files -n QtAssistant-compat-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libQtAssistantClient.so
 %{_libdir}/libQtAssistantClient.prl
+%{_includedir}/qt4/QtAssistant
+%{_includedir}/qt4/Qt/QAssistantClient
+%{_includedir}/qt4/Qt/QtAssistant
+%{_includedir}/qt4/Qt/qassistantclient.h
+%{_includedir}/qt4/Qt/qassistantclient_global.h
 %{_pkgconfigdir}/QtAssistantClient.pc
 %{_datadir}/qt4/mkspecs/features/assistant.prf
