@@ -6,7 +6,7 @@ Summary:	Qt Assistant compatibility binary (legacy)
 Summary(pl.UTF-8):	Program Qt Assistant (stara wersja)
 Name:		qt4-assistant-compat
 Version:	4.6.3
-Release:	2
+Release:	3
 License:	LGPL v2.1 with Nokia Qt exception or GPL v3
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.qt.nokia.com/qt/source/qt-assistant-qassistantclient-library-compat-src-%{version}.tar.gz
