@@ -123,7 +123,7 @@ Biblioteka kompatybilności Qt AssistantClient - pliki programistyczne.
 
 %prep
 %setup -q -n qt-assistant-qassistantclient-library-compat-version-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 cd lib
